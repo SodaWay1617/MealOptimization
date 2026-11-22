@@ -39,6 +39,8 @@ button:disabled { opacity: .5; cursor: default; }
 .recipe-card-content { display: grid; gap: 12px; width: 100%; padding: 20px; flex: 1; align-content: space-between; }
 .recipe-preview { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .recipe-card strong { font-size: 1.25rem; }
+.card-nutrition { display: flex; flex-wrap: wrap; gap: 4px 9px; color: var(--muted); }
+.card-nutrition span { white-space: nowrap; }
 .category { font-size: .82rem; color: var(--accent); }
 .card-footer { display: flex; justify-content: space-between; font-size: .85rem; }
 .panel { padding: clamp(16px, 4vw, 32px); }

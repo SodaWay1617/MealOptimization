@@ -15,6 +15,7 @@ from app.web.recipe_assistant import (
     RecipeChangedError, ask_assistant, render_recipe_body, save_draft, save_tags, validate_draft, validate_new_draft,
 )
 from app.web.recipe_images import IMAGE_TYPES, find_image
+from app.web.recipe_nutrition import nutrition_properties
 from app.web.recipe_tags import TAGS
 from app.web.stores import STORES, StoreError, cart_products, preferred_products
 from app.web.store_assistant import plan_search, rank_products
@@ -217,6 +218,7 @@ def create_app() -> Flask:
                     }
                     price = metadata["portion_price"]
                     metadata["portion_price_rub"] = price["rub"] if price else None
+                    metadata.update(nutrition_properties(metadata["nutrition"]))
                     return jsonify(create_recipe(root, categories, dict(
                         draft, servings=1, body=body, index=payload.get("index")
                     ), ai_metadata=metadata)), 201

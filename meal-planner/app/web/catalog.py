@@ -10,6 +10,7 @@ import yaml
 
 from app.scanner.scan import scan_recipes
 from app.web.recipe_images import IMAGE_EMBED, find_image
+from app.web.recipe_nutrition import read_nutrition
 from app.web.recipe_tags import TAGS, validate_tags
 from app.web.portion_price import read_portion_price
 from app.web.recipe_index import add_index_link, recipe_indexes
@@ -45,7 +46,6 @@ def read_recipe(path: Path, root: Path, category: str | None) -> dict:
     title = metadata.get("title")
     ingredients = metadata.get("ingredients")
     servings = metadata.get("servings")
-    nutrition = metadata.get("nutrition")
     return {
         "id": path.relative_to(root).as_posix(),
         "title": title if isinstance(title, str) and title.strip() else (
@@ -65,11 +65,7 @@ def read_recipe(path: Path, root: Path, category: str | None) -> dict:
         "structuredBody": metadata.get("recipe_body") == "one_portion",
         "isSynced": metadata.get("nutrition_estimated") is True,
         "portionPrice": read_portion_price(metadata.get("portion_price")),
-        "nutrition": {
-            key: value for key, value in nutrition.items()
-            if key in ("kcal", "protein_g", "fat_g", "carbs_g")
-            and type(value) in (int, float) and 0 <= value <= 10000
-        } if isinstance(nutrition, dict) else {},
+        "nutrition": read_nutrition(metadata),
         "steps": [step for step in metadata["steps"] if isinstance(step, str)]
         if isinstance(metadata.get("steps"), list) else [],
         "body": body.strip(),

@@ -11,11 +11,11 @@ import yaml
 
 from app.sync.llm import LLMClient, LLMParseError
 from app.web.recipe_images import IMAGE_EMBED
+from app.web.recipe_nutrition import NUTRITION_PROPERTIES, nutrition_properties
 from app.web.portion_price import read_portion_price
 from app.web.recipe_tags import validate_tags
 
 
-NUTRIENTS = ("kcal", "protein_g", "fat_g", "carbs_g")
 NOTE_WRITE_LOCK = Lock()
 INSTRUCTIONS = """Помоги пользователю адаптировать кулинарный рецепт под одну обычную
 порцию для взрослого. Подбирай разумные количества с учётом роли блюда и способа
@@ -83,13 +83,13 @@ def validate_draft(draft: object) -> dict:
             raise ValueError("Проверьте количество и единицу ингредиента.")
         normalized.append({"name": name.strip(), "amount": amount, "unit": unit})
     if not isinstance(nutrition, dict) or any(
-        not _number(nutrition.get(key), minimum=0, maximum=10000) for key in NUTRIENTS
+        not _number(nutrition.get(key), minimum=0, maximum=10000) for key in NUTRITION_PROPERTIES
     ):
         raise ValueError("В черновике должны быть все четыре значения КБЖУ.")
     return {
         "ingredients": normalized,
         "steps": _strings(draft.get("steps")),
-        "nutrition": {key: nutrition[key] for key in NUTRIENTS},
+        "nutrition": {key: nutrition[key] for key in NUTRITION_PROPERTIES},
         "assumptions": _strings(draft.get("assumptions", []), required=False),
         "planningTags": validate_tags(draft.get("planningTags", [])),
     }
@@ -227,6 +227,7 @@ def _update_note(path: Path, revision: object, normalized: dict) -> None:
     metadata["planning_tags"] = tags
     if normalized:
         metadata.update(normalized, servings=1, nutrition_estimated=True, recipe_body="one_portion")
+        metadata.update(nutrition_properties(normalized["nutrition"]))
         price = normalized.get("portion_price")
         metadata["portion_price_rub"] = price["rub"] if price else None
         body = newline + render_recipe_body(normalized, body).replace("\n", newline)

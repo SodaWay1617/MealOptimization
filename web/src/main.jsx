@@ -24,6 +24,25 @@ function postJson(path, payload) {
 }
 
 const rubles = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' });
+const nutrientNumber = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 1 });
+const catalogNutrients = {
+  kcal: ['Калорийность', 'ккал'],
+  protein_g: ['Белки', 'Б'],
+  fat_g: ['Жиры', 'Ж'],
+  carbs_g: ['Углеводы', 'У'],
+};
+
+function CardNutrition({ values = {} }) {
+  const entries = Object.entries(catalogNutrients).filter(([key]) => values[key] != null);
+  if (!entries.length) return null;
+  return <small className="card-nutrition" aria-label="Примерное КБЖУ на порцию">
+    {entries.map(([key, [name, label]]) => (
+      <span key={key} title={name}>
+        {key === 'kcal' ? `${nutrientNumber.format(values[key])} ${label}` : `${label} ${nutrientNumber.format(values[key])} г`}
+      </span>
+    ))}
+  </small>;
+}
 
 function RecipeDetail({ recipe, categoryLabel, onSaved, tagLabels }) {
   const query = new URLSearchParams({ id: recipe.id });
@@ -233,6 +252,7 @@ function App() {
                         {item.portionPrice?.rub != null && <small>
                           {item.portionPrice.missing.length > 0 ? 'Частично: ' : 'За порцию: '}{rubles.format(item.portionPrice.rub)}
                         </small>}
+                        <CardNutrition values={item.nutrition} />
                         <span className="card-footer">{item.servings ? `${item.servings} порц.` : 'Открыть рецепт'} <span aria-hidden="true">↗</span></span>
                       </span>
                     </button>
