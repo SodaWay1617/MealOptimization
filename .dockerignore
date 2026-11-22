@@ -1,0 +1,13 @@
+**
+!Dockerfile
+!web/
+!web/**
+web/node_modules/
+web/dist/
+!meal-planner/
+!meal-planner/app/
+!meal-planner/app/**
+**/__pycache__/
+!meal-planner/config/
+!meal-planner/config/categories.yaml
+!meal-planner/web-requirements.txt

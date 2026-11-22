@@ -1,0 +1,74 @@
+{
+  "defaults": [
+    {
+      "ingredient_name": "молоко",
+      "unit": "мл",
+      "price_per_unit": 0.12,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "яйцо",
+      "unit": "шт",
+      "price_per_unit": 12.0,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "рис",
+      "unit": "г",
+      "price_per_unit": 0.16,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "гречка",
+      "unit": "г",
+      "price_per_unit": 0.14,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "курица",
+      "unit": "г",
+      "price_per_unit": 0.32,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "сыр",
+      "unit": "г",
+      "price_per_unit": 0.85,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "помидор",
+      "unit": "г",
+      "price_per_unit": 0.22,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "огурец",
+      "unit": "г",
+      "price_per_unit": 0.18,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "банан",
+      "unit": "г",
+      "price_per_unit": 0.13,
+      "currency": "RUB",
+      "source": "default"
+    },
+    {
+      "ingredient_name": "хлеб",
+      "unit": "г",
+      "price_per_unit": 0.11,
+      "currency": "RUB",
+      "source": "default"
+    }
+  ]
+}

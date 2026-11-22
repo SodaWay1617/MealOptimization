@@ -1,0 +1,2492 @@
+{
+  "defaults": [
+    {
+      "ingredient_name": "Соль",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 30
+    },
+    {
+      "ingredient_name": "Чёрный перец",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 29
+    },
+    {
+      "ingredient_name": "Яйца",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 23
+    },
+    {
+      "ingredient_name": "Чеснок",
+      "unit": "зубчик",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 21
+    },
+    {
+      "ingredient_name": "Лук",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 20
+    },
+    {
+      "ingredient_name": "Мёд",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 16
+    },
+    {
+      "ingredient_name": "Вода",
+      "unit": "л",
+      "price_per_unit": 0,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 13
+    },
+    {
+      "ingredient_name": "Морковь",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 13
+    },
+    {
+      "ingredient_name": "Растительное масло",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 12
+    },
+    {
+      "ingredient_name": "Картофель",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 10
+    },
+    {
+      "ingredient_name": "Оливковое масло",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 9
+    },
+    {
+      "ingredient_name": "Сливочное масло",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 9
+    },
+    {
+      "ingredient_name": "Соль, перец",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 9
+    },
+    {
+      "ingredient_name": "Банан",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Болгарский перец",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Вода",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Корица",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Лавровый лист",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Молоко",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 8
+    },
+    {
+      "ingredient_name": "Соль",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 7
+    },
+    {
+      "ingredient_name": "Соль, чёрный перец",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 7
+    },
+    {
+      "ingredient_name": "Сыр твёрдый",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 7
+    },
+    {
+      "ingredient_name": "Куриное филе",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 6
+    },
+    {
+      "ingredient_name": "Сахар",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 6
+    },
+    {
+      "ingredient_name": "Томатная паста",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 6
+    },
+    {
+      "ingredient_name": "Йогурт натуральный",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Лимон",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Сахар",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Творог",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Шампиньоны",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Яйцо",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 5
+    },
+    {
+      "ingredient_name": "Ваниль",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 4
+    },
+    {
+      "ingredient_name": "Капуста белокочанная",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 4
+    },
+    {
+      "ingredient_name": "Курица (бедро + голень или филе)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 4
+    },
+    {
+      "ingredient_name": "Разрыхлитель",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 4
+    },
+    {
+      "ingredient_name": "Свёкла",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 4
+    },
+    {
+      "ingredient_name": "Авокадо",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Апельсин",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Арахисовая паста",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Зелень",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Зелёный лук",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Изюм",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Кабачок",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Картофель",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Корица",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Лук репчатый",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Майонез",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Молоко",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Овсяные хлопья",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Огурец свежий",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Орехи",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Помидоры",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Сливки 10–20%",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Соль",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Сыр",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Творог 5%",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Хлеб",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 3
+    },
+    {
+      "ingredient_name": "Арахисовая паста (100% арахис)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Гречка",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Зелень (укроп, петрушка)",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Куриная грудка",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Лёд",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Маслины или оливки (без косточек)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Масло сливочное или растительное",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Мука",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Мука пшеничная",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Мёд или кленовый сироп",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Огурец",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Оливковое масло extra virgin",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Орехи",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Орехи / семечки",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Паприка",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Пармезан",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Песто",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Помидор",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Помидоры черри",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Сахар",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Сметана",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Сметана или йогурт",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Соевый соус",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Солёные огурцы",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Сыр фета",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Томатная паста или томаты в собственном соку",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Яблоки",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 2
+    },
+    {
+      "ingredient_name": "Арахисовая паста",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Баклажан",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Бальзамический уксус или лимонный сок",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Бананы (очень спелые)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Бананы (спелые)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Белый или цельнозерновой хлеб",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Белый хлеб / чиабатта",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Брокколи",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Булгур",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ваниль",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ванильный сахар",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ванильный сахар",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Варёный рис",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ветчина / буженина",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ветчина или курица",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Вода / бульон",
+      "unit": "л",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Вода / овощной бульон",
+      "unit": "л",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Гвоздика",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Говядина (лопатка / грудинка)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Говядина (на кости или мякоть)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Говядина на кости или свинина",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Говяжий фарш",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Горошек консервированный",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Горчица",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Горький шоколад (70–85% какао)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Гранатовый сок",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Гранола",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Грецкие орехи (мелко измельчённые)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Греческий йогурт",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелень",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелень (укроп / зелёный лук)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелень (укроп / петрушка)",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелень (укроп, зелёный лук)",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелень (укроп, петрушка, зелёный лук)",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный горошек (консервированный)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный лук",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный лук",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный лук / укроп",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный лук, укроп или петрушка",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Зелёный чай с жасмином",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Изюм / курага / шоколад 70%",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Изюм, курага или ягоды",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Итальянские травы",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Итальянские травы / орегано / базилик",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Йогурт натуральный",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кабачок или брокколи",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Какао-порошок",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Квашеная капуста",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кедровые орешки или миндаль",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кефир",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Колбаса варёная (или курица)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Копчёная колбаса",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Копчёности (грудинка, охотничьи колбаски)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Корица",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Корица / ваниль",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Корица или ваниль",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Корица молотая",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Крабовые палочки",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Красный лук",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Креветки",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кукуруза консервированная",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кукуруза консервированная (без жидкости)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кукурузная мука",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кумин (зира)",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кунжут",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Кунжут / семечки",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Куриная грудка",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Куриный фарш",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лаваш",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лапша (яичная / суповая)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимон или лайм",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок или бальзамик",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок или бальзамик",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок или бальзамический уксус",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок или уксус",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимонный сок или яблочный уксус",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лимоны",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Листья салата романо или айсберг",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Лёд",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Майонез",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Макароны",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Манка",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Манная крупа",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло для жарки",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло оливковое",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло оливковое или сливочное",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло растительное",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло сливочное",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло сливочное",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Масло сливочное или оливковое",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Матча (порошок)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко / вода",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко / йогурт",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко / растительное молоко",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко или сливки",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко или сливки (10–20%)",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко или сливки 10–20%",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молоко или сметана",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Молотый кориандр",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Моцарелла",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Моцарелла (шарики или один шар)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мука",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мука или манная крупа",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мята",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мята",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мята свежая",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мёд",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мёд / сироп",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Мёд или сироп",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Немного сыра",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Овсяные хлопья (долгой или средней варки)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Огурцы",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Огурцы маринованные",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Оливковое или растительное масло",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Оливковое масло",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орегано",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи (грецкие / миндаль)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи (грецкие / пекан / кедровые)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи (грецкие или кедровые)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи (грецкие, фундук, миндаль)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи (грецкие/миндаль/фундук)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Орехи или семечки",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Острый перец",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Палочка корицы",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паприка (копчёная — отлично)",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паприка / прованские травы",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паприка / чеснок / травы",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паприка или копчёная паприка",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паприка, кумин (зира), кориандр",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паста (мелкая: рожки, ракушки)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Паста (пенне / фузилли / тальятелле)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Перец",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Петрушка",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Плавленый сыр (или твёрдый типа Гауда)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Повидло",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Помидоры (спелые)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Помидоры в собственном соку",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Помидоры в собственном соку / томаты",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Помидоры свежие",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Помидоры черри",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Разрыхлитель",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рассол огуречный",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Растительное масло",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Растительное масло (подсолнечное / оливковое)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Репчатый лук",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис (длиннозёрный / басмати)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис (жасмин / басмати / круглозёрный)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис (круглозёрный)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис (сухой)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Рис круглозёрный",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Руккола",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Руккола / микс салатов",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Руккола или листовой салат",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сахар",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сахар или мёд",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Свежая кинза",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Свежая мята",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Свежий базилик",
+      "unit": "пучок",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Свежий огурец",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сельдерей (стебли)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Семена (чия / лен)",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Семена чиа / льна",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Семечки тыквенные",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сливочное масло или оливковое масло",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сливочное масло или сливочный сыр",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сметана (для подачи)",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сметана или греческий йогурт",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сметана или йогурт",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сметана или крем-сыр",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сметана или майонез",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Соль, перец, травы",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сосиски",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Соус «Цезарь» (готовый)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Соус наршараб",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Соус терияки (готовый)",
+      "unit": "мл",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сухие травы",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сушёный орегано",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (Российский / Гауда / Эдам)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (пармезан / твёрдый)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (пармезан или твёрдый)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (тёртый)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (тёртый, например, Гауда, Моцарелла, Пармезан)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр (фета / брынза / козий / мягкий творожный)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр твёрдый (Гауда / Российский / Эдам)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Сыр твёрдый (Российский / Гауда / Эдам)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Твёрдый сыр",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Твёрдый сыр (тёртый)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Твёрдый сыр или пармезан",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ткемали",
+      "unit": "ст.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Томатная паста",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Тыква (мускатная или обычная)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Тёмный шоколад",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Тёртый сыр",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Укроп",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Уксус",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Уксус или лимонный сок",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фарш (говяжий / свино-говяжий / куриный)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фасоль (белая или красная, консервированная)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фасоль красная (консервированная)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Филе индейки",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фрукты",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фрукты (банан / яблоко / ягоды)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Фрукты / ягоды",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб (тостовый / цельнозерновой / чиабатта)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб (тостовый / цельнозерновой)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб (тостовый / чиабатта / цельнозерновой)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб (чиабатта / тостовый / цельнозерновой)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб (чиабатта / тосты / багет)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлеб тостовый или батон",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хлебцы (ржаные / цельнозерновые)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Хмели-сунели",
+      "unit": "ч.л.",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Чай (чёрный / зелёный / улун)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Чеснок",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Чили молотый",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Чёрный перец горошком",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Шампиньоны (или вешенки)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Шоколадные капли",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Шпинат или зелень",
+      "unit": "по вкусу",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Щепотка соли",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Щепотка чили",
+      "unit": "щепотка",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Яблоко",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Яблоко (кубиками)",
+      "unit": "шт",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ягоды",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    },
+    {
+      "ingredient_name": "Ягоды (клюква / брусника / смородина / малина / микс)",
+      "unit": "г",
+      "price_per_unit": null,
+      "currency": "RUB",
+      "source": "seed",
+      "usage_count": 1
+    }
+  ]
+}

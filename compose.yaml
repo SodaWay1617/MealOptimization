@@ -1,0 +1,17 @@
+services:
+  meal-planner:
+    build: .
+    env_file:
+      - path: ./meal-planner/config/.env
+        required: false
+    ports:
+      - "127.0.0.1:${MEAL_PORT:-8080}:8080"
+    environment:
+      PLANS_DIR: /plans
+    volumes:
+      - type: bind
+        source: ${MEAL_RECIPES_DIR:-./Пример базы/Рецепты}
+        target: /recipes
+      - type: bind
+        source: ${MEAL_PLANS_DIR:-./Пример базы/Планы питания}
+        target: /plans

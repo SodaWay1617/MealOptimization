@@ -1,0 +1,42 @@
+ingredient_sections:
+  "молоко": dairy
+  "кефир": dairy
+  "йогурт": dairy
+  "сыр": dairy
+  "творог": dairy
+  "яйца": dairy
+  "яйцо": dairy
+  "курица": meat
+  "фарш": meat
+  "говядина": meat
+  "рыба": fish
+  "лосось": fish
+  "тунец": fish
+  "помидоры": produce
+  "помидор": produce
+  "огурцы": produce
+  "огурец": produce
+  "лук": produce
+  "морковь": produce
+  "картофель": produce
+  "картошка": produce
+  "бананы": produce
+  "банан": produce
+  "яблоки": produce
+  "яблоко": produce
+  "зелень": produce
+  "рис": pantry
+  "гречка": pantry
+  "макароны": pantry
+  "мука": pantry
+  "сахар": pantry
+  "соль": pantry
+  "масло": pantry
+  "оливковое масло": pantry
+  "подсолнечное масло": pantry
+  "хлеб": bakery
+  "лаваш": bakery
+  "вода": beverages
+  "сок": beverages
+  "чай": beverages
+  "кофе": beverages
