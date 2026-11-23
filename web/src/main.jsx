@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { imageUrl, RecipeCover, RecipeMarkdown } from './RecipeMarkdown.jsx';
 import { Nutrition, RecipeAssistant } from './RecipeAssistant.jsx';
@@ -25,6 +25,7 @@ function postJson(path, payload) {
 
 const rubles = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' });
 const nutrientNumber = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 1 });
+const catalogCategoryOrder = ['breakfast', 'salad', 'soup', 'main', 'snack', 'drink'];
 const catalogNutrients = {
   kcal: ['Калорийность', 'ккал'],
   protein_g: ['Белки', 'Б'],
@@ -44,10 +45,33 @@ function CardNutrition({ values = {} }) {
   </small>;
 }
 
+function CatalogCard({ item, onOpen }) {
+  return (
+    <button className={item.previewImage ? 'recipe-card' : 'recipe-card recipe-card-compact'} onClick={() => onOpen(item)}>
+      {item.previewImage && <img className="recipe-preview" src={imageUrl(item.id, item.previewImage)}
+        alt="" loading="lazy" decoding="async" />}
+      <span className="recipe-card-content">
+        <strong>{item.title}</strong>
+        {item.planningTags.includes('budget') && <span className="category">Недорогое</span>}
+        {item.portionPrice?.rub != null && <small>
+          {item.portionPrice.missing.length > 0 ? 'Частично: ' : 'За порцию: '}{rubles.format(item.portionPrice.rub)}
+        </small>}
+        <CardNutrition values={item.nutrition} />
+        {item.servings != null && <small>{item.servings} порц.</small>}
+      </span>
+      <span className="recipe-card-arrow" aria-hidden="true">↗</span>
+    </button>
+  );
+}
+
 function RecipeDetail({ recipe, categoryLabel, onSaved, tagLabels }) {
   const query = new URLSearchParams({ id: recipe.id });
   const [tags, setTags] = useState(recipe.planningTags ?? []);
   const [tagStatus, setTagStatus] = useState('');
+  const [recipeSection, setRecipeSection] = useState('ingredients');
+  const [cookingStep, setCookingStep] = useState(null);
+  const hasStructuredRecipe = recipe.ingredients.length > 0 && recipe.steps?.length > 0;
+  const workspace = useRef(null);
   async function saveRecipeTags() {
     setTagStatus('');
     try {
@@ -61,10 +85,22 @@ function RecipeDetail({ recipe, categoryLabel, onSaved, tagLabels }) {
     return postJson(`/api/recipe/assistant${action}?${query}`, payload);
   }
   return (
-    <article className="panel recipe">
-      <p className="category">{categoryLabel}</p>
-      <h1>{recipe.title}</h1>
-      <p className="category">{recipe.isSynced ? 'Доступен для плана питания' : 'Для плана питания нужна AI-синхронизация'}</p>
+    <article className="recipe recipe-detail">
+      <header className="recipe-intro">
+        <div>
+          {categoryLabel && <p className="category">{categoryLabel}</p>}
+          <h1>{recipe.title}</h1>
+          {recipe.servings && <p className="category">{recipe.servings} порц.</p>}
+          {!recipe.isSynced && <small>Для плана питания нужна AI-синхронизация</small>}
+          {hasStructuredRecipe && <div className="cook-actions"><button className="primary" onClick={() => {
+            setCookingStep(0);
+            setRecipeSection('steps');
+            workspace.current?.scrollIntoView({ block: 'start' });
+          }}>Начать готовить</button></div>}
+        </div>
+        <RecipeCover recipe={recipe} />
+      </header>
+      <div className="recipe-stats">
       <dl className="recipe-price">
         <dt>Цена порции</dt>
         <dd>{recipe.portionPrice?.rub == null ? 'Без оценки' : <>
@@ -72,11 +108,53 @@ function RecipeDetail({ recipe, categoryLabel, onSaved, tagLabels }) {
           <small>Лента · {recipe.portionPrice.date}{recipe.portionPrice.missing.length > 0 ? ' · частичная оценка' : ''}</small>
         </>}</dd>
       </dl>
-      {!recipe.structuredBody && recipe.steps?.length > 0 && <RecipeCover recipe={recipe} />}
+        <Nutrition values={recipe.nutrition ?? {}} />
+      </div>
+      {hasStructuredRecipe && (
+        <section className="panel recipe-workspace" ref={workspace}>
+          <nav className="recipe-sections" aria-label="Разделы рецепта">
+            <button aria-pressed={recipeSection === 'ingredients'} onClick={() => setRecipeSection('ingredients')}>Ингредиенты</button>
+            <button aria-pressed={recipeSection === 'steps'} onClick={() => setRecipeSection('steps')}>Приготовление</button>
+          </nav>
+          {recipeSection === 'ingredients' ? (
+            <ul className="ingredients">
+              {recipe.ingredients.map((item, index) => (
+                <li key={index}><span>{item.name}</span><strong>{item.amount} {item.unit}</strong></li>
+              ))}
+            </ul>
+          ) : cookingStep == null ? (
+            <ol className="cooking-steps">{recipe.steps.map((step, index) => <li key={index}>{step}</li>)}</ol>
+          ) : (
+            <div className="cooking-current">
+              <p className="category">Шаг {cookingStep + 1} из {recipe.steps.length}</p>
+              <progress value={cookingStep + 1} max={recipe.steps.length} aria-label="Ход приготовления" />
+              <p aria-live="polite">{recipe.steps[cookingStep]}</p>
+              <div className="plan-actions">
+                <button disabled={cookingStep === 0} onClick={() => setCookingStep(cookingStep - 1)}>Назад</button>
+                <button className="primary" onClick={() => setCookingStep(cookingStep + 1 < recipe.steps.length ? cookingStep + 1 : null)}>
+                  {cookingStep + 1 < recipe.steps.length ? 'Дальше' : 'Завершить'}
+                </button>
+                <button onClick={() => setCookingStep(null)}>Все шаги</button>
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+      {!hasStructuredRecipe && recipe.ingredients.length > 0 && <section className="panel">
+        <h2>Ингредиенты</h2>
+        <ul className="ingredients">{recipe.ingredients.map((item, index) => (
+          <li key={index}><span>{item.name}</span><strong>{item.amount} {item.unit}</strong></li>
+        ))}</ul>
+      </section>}
+      {hasStructuredRecipe ? <details className="panel recipe-note"><summary>Заметка Obsidian</summary><RecipeMarkdown recipe={recipe} /></details>
+        : <div className="panel recipe-note"><RecipeMarkdown recipe={recipe} /></div>}
+      <section className="panel recipe-tools">
       <RecipeAssistant key={recipe.id} tagLabels={tagLabels} priceRequest={postJson}
         send={(payload) => postAssistant('', payload)} apply={async (payload) => {
         const saved = await postAssistant('/save', payload);
         setTags(saved.planningTags);
+        setCookingStep(null);
+        setRecipeSection('ingredients');
         onSaved(saved);
       }} />
       <details className="recipe-tags">
@@ -85,26 +163,7 @@ function RecipeDetail({ recipe, categoryLabel, onSaved, tagLabels }) {
         <button onClick={saveRecipeTags}>Сохранить теги</button>
         {tagStatus && <p role="status">{tagStatus}</p>}
       </details>
-      {!recipe.structuredBody && recipe.ingredients.length > 0 && (
-        <section>
-          <h2>Ингредиенты {recipe.servings && <small>· {recipe.servings} порц.</small>}</h2>
-          <ul className="ingredients">
-            {recipe.ingredients.map((item, index) => (
-              <li key={index}><span>{item.name}</span><span>{item.amount} {item.unit}</span></li>
-            ))}
-          </ul>
-        </section>
-      )}
-      {!recipe.structuredBody && <Nutrition values={recipe.nutrition ?? {}} />}
-      {!recipe.structuredBody && recipe.steps?.length ? (
-        <>
-          <h2>Приготовление</h2>
-          <ol>{recipe.steps.map((step, index) => <li key={index}>{step}</li>)}</ol>
-          <details><summary>Текст заметки</summary><RecipeMarkdown recipe={recipe} /></details>
-        </>
-      ) : <RecipeMarkdown recipe={recipe.structuredBody ? {
-        ...recipe, body: recipe.body.replace(/\n+Оценка на порцию по Ленте \(\d{4}-\d{2}-\d{2}\): [^\n]+\.$/, ''),
-      } : recipe} />}
+      </section>
     </article>
   );
 }
@@ -117,6 +176,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('');
   const [status, setStatus] = useState('');
+  const searchInput = useRef(null);
 
   async function refreshCatalog(signal) {
     const next = await request('/api/recipes', { signal });
@@ -141,6 +201,8 @@ function App() {
   }
 
   const categories = catalog?.categories ?? {};
+  const orderedCategoryKeys = [...new Set([...catalogCategoryOrder, ...Object.keys(categories)])]
+    .filter((key) => Object.hasOwn(categories, key));
   const tagLabels = catalog?.planningTags ?? {};
   const search = query.trim().toLocaleLowerCase('ru');
   const recipes = (catalog?.recipes ?? []).filter((item) => (
@@ -148,9 +210,20 @@ function App() {
     [item.title, ...item.ingredients.map(({ name }) => name)]
       .some((value) => value.toLocaleLowerCase('ru').includes(search))
   ));
-  const groupedRecipes = new Map([...Object.keys(categories), null].map((key) => [key, []]));
+  const groupedRecipes = new Map([...orderedCategoryKeys, null].map((key) => [key, []]));
   for (const item of recipes) {
     groupedRecipes.get(groupedRecipes.has(item.category) ? item.category : null).push(item);
+  }
+  const featured = catalog?.recipes.find((item) => item.previewImage && item.isSynced)
+    ?? catalog?.recipes.find((item) => item.previewImage);
+
+  function openCatalogRecipe(item) {
+    return navigate(async () => {
+      setRecipe(await request('/api/recipe?' + new URLSearchParams({ id: item.id })));
+      setReturnToPlan(false);
+      setScreen('detail');
+      window.scrollTo(0, 0);
+    });
   }
 
   return (
@@ -217,14 +290,32 @@ function App() {
         )}
         {screen === 'catalog' && (
           <>
-            <div className="catalog-heading"><h1>Книга рецептов</h1><button onClick={() => navigate(refreshCatalog)}>Обновить</button></div>
+            <section className={featured ? 'catalog-intro has-featured' : 'catalog-intro'}>
+              <div className="catalog-intro-copy">
+                <h1>Книга рецептов</h1>
+                <div className="catalog-actions">
+                  <button className="primary" onClick={() => { setScreen('plan'); window.scrollTo(0, 0); }}>Спланировать меню</button>
+                  <button onClick={() => searchInput.current?.focus()}>Найти рецепт</button>
+                </div>
+              </div>
+              {featured && <button className="catalog-feature" onClick={() => openCatalogRecipe(featured)}>
+                <img src={imageUrl(featured.id, featured.previewImage)} alt="" />
+                <span>{featured.title} <span aria-hidden="true">↗</span></span>
+              </button>}
+            </section>
             <div className="filters">
-              <input type="search" aria-label="Поиск рецептов" placeholder="Поиск по названию или ингредиенту" value={query} onChange={(event) => setQuery(event.target.value)} />
+              <input ref={searchInput} type="search" aria-label="Поиск рецептов" placeholder="Поиск по названию или ингредиенту" value={query} onChange={(event) => setQuery(event.target.value)} />
               <select aria-label="Категория" value={category} onChange={(event) => setCategory(event.target.value)}>
                 <option value="">Все категории</option>
-                {Object.entries(categories).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                {orderedCategoryKeys.map((key) => <option key={key} value={key}>{categories[key]}</option>)}
               </select>
+              <button onClick={() => navigate(refreshCatalog)}>Обновить</button>
             </div>
+            {!search && !category && <nav className="catalog-index" aria-label="Категории рецептов">
+              {[...groupedRecipes].filter(([key, items]) => key && items.length).map(([key]) => (
+                <a key={key} href={`#recipes-${key}`}>{categories[key]}</a>
+              ))}
+            </nav>}
             {!catalog && !status && <p role="status">Загрузка рецептов…</p>}
             {catalog && recipes.length === 0 && (
               <div className="panel empty">
@@ -232,34 +323,21 @@ function App() {
                 <p>{query || category ? 'Измените запрос или категорию.' : 'Добавьте рецепт через форму или положите Markdown-файлы в подключённую папку и обновите каталог.'}</p>
               </div>
             )}
-            {[...groupedRecipes].filter(([, items]) => items.length > 0).map(([key, items]) => (
-              <section className="catalog-category" key={key ?? 'uncategorized'}>
-                <h2>{categories[key] ?? 'Без категории'}</h2>
-                <div className="cards">
-                  {items.map((item) => (
-                    <button className="recipe-card" key={item.id} onClick={() => navigate(async () => {
-                      setRecipe(await request('/api/recipe?' + new URLSearchParams({ id: item.id })));
-                      setReturnToPlan(false);
-                      setScreen('detail');
-                    })}>
-                      {item.previewImage && (
-                        <img className="recipe-preview" src={imageUrl(item.id, item.previewImage)}
-                          alt="" loading="lazy" decoding="async" />
-                      )}
-                      <span className="recipe-card-content">
-                        {item.planningTags.includes('budget') && <span className="category">Недорогое</span>}
-                        <strong>{item.title}</strong>
-                        {item.portionPrice?.rub != null && <small>
-                          {item.portionPrice.missing.length > 0 ? 'Частично: ' : 'За порцию: '}{rubles.format(item.portionPrice.rub)}
-                        </small>}
-                        <CardNutrition values={item.nutrition} />
-                        <span className="card-footer">{item.servings ? `${item.servings} порц.` : 'Открыть рецепт'} <span aria-hidden="true">↗</span></span>
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </section>
-            ))}
+            {[...groupedRecipes].filter(([, items]) => items.length > 0).map(([key, items]) => {
+              const illustrated = items.filter((item) => item.previewImage);
+              const compact = items.filter((item) => !item.previewImage);
+              return (
+                <section className="catalog-category" id={`recipes-${key ?? 'uncategorized'}`} key={key ?? 'uncategorized'}>
+                  <h2>{categories[key] ?? 'Без категории'}</h2>
+                  {illustrated.length > 0 && <div className="cards">
+                    {illustrated.map((item) => <CatalogCard key={item.id} item={item} onOpen={openCatalogRecipe} />)}
+                  </div>}
+                  {compact.length > 0 && <div className="compact-cards">
+                    {compact.map((item) => <CatalogCard key={item.id} item={item} onOpen={openCatalogRecipe} />)}
+                  </div>}
+                </section>
+              );
+            })}
           </>
         )}
       </main>
