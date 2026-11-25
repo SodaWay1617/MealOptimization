@@ -4,6 +4,13 @@ import { ingredientKey, readPreference, shops, writePreference } from './shoppin
 const units = { г: ['г', 1], кг: ['г', 1000], мл: ['мл', 1], л: ['мл', 1000], шт: ['шт', 1] };
 const rubles = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' });
 
+function storeQueries(name, alternatives = []) {
+  const key = ingredientKey(name);
+  if (/^(помидор|помидоры|томат|томаты)$/.test(key)) return ['помидоры', 'томаты'];
+  if (/^(огурец|огурцы)$/.test(key)) return ['огурцы'];
+  return [...new Set([...alternatives.slice(0, 2), key])];
+}
+
 function lineCost(row) {
   const product = row.products.find((item) => item.id === row.id);
   if (!Number.isFinite(product?.price) || product.price <= 0) return null;
@@ -87,26 +94,30 @@ export function StoreCart({ items, send }) {
       && (!product.limit || q <= product.limit.max);
   }
 
-  async function findProducts(row, queries = [row.query]) {
+  async function findProducts(row, queries = storeQueries(row.query), reviewAll = false) {
     try {
       const collected = new Map();
+      const word = ingredientKey(row.query).match(/[а-яёa-z]{3,}/i)?.[0];
+      const root = /^(помид|томат)/.test(word ?? '') ? /помид|томат/ : word?.slice(0, 4);
+      const plainVegetable = /^(помидор|помидоры|томат|томаты|огурец|огурцы)$/.test(ingredientKey(row.query));
+      function matches(product) {
+        const name = ingredientKey(product.name);
+        return root && (typeof root === 'string' ? name.includes(root) : root.test(name))
+          && (!plainVegetable || !/марин|сол[её]н|консерв|в собственном соку|соус|паста|семен/.test(name))
+          && (!word.startsWith('кабач') || !/семен|икра|рассад/.test(name)) && isCompatible(row, product);
+      }
       for (const [position, query] of queries.entries()) {
         const preferred = position === 0 ? preferredLinks(row) : [];
         const result = await send(store, 'search', { query, preferred, ...context });
         for (const product of result.products) {
           if (!collected.has(product.id)) collected.set(product.id, product);
         }
-        if ([...collected.values()].some((product) => product.preferred && isCompatible(row, product))) break;
+        if (!reviewAll && [...collected.values()].some((product) =>
+          (product.preferred && isCompatible(row, product)) || matches(product))) break;
       }
-      const word = ingredientKey(row.query).match(/[а-яёa-z]{3,}/i)?.[0];
-      const root = word?.startsWith('помид') ? 'томат' : word?.slice(0, 4);
       const products = [...collected.values()].slice(0, 16);
       const suggested = products.find((product) => product.preferred && isCompatible(row, product))
-        ?? products.find((product) => {
-          const name = ingredientKey(product.name);
-          return root && (name.includes(root) || name.includes(word.slice(0, 4)))
-            && (!word.startsWith('кабач') || !/семен|икра|рассад/.test(name)) && isCompatible(row, product);
-        });
+        ?? products.find(matches);
       return { products, id: suggested?.id ?? '', q: suggested ? quantityFor(row.ingredient, suggested) : '', error: '' };
     } catch (failure) {
       return { products: [], id: '', q: '', error: failure.message };
@@ -119,7 +130,7 @@ export function StoreCart({ items, send }) {
     setLink('');
     try {
       const rules = readPreference('shopping-rules', '');
-      const aiPlan = ai ? await send(store, 'ai-queries', { items, instruction, rules }) : null;
+      const aiPlan = ai && instruction.trim() ? await send(store, 'ai-queries', { items, instruction, rules }) : null;
       const initial = [...items, ...(aiPlan?.extras ?? [])].map((ingredient) => ({
         ingredient, query: ingredient.name, products: [], id: '', q: '', error: '',
       }));
@@ -131,13 +142,12 @@ export function StoreCart({ items, send }) {
           const index = next++;
           const row = initial[index];
           const planned = aiPlan?.queries[index] ?? [];
-          const query = ingredientKey(row.query).replace(/^помидор(?:ы)?(?=\s|$)/, 'томаты');
-          const result = await findProducts(row, [...new Set([...planned, query])].slice(0, 3));
+          const result = await findProducts(row, storeQueries(row.query, planned), ai);
           found[index] = { ...row, ...result };
           update(index, result);
         }
       }));
-      if (ai) {
+      if (ai && found.length) {
         const { ids } = await send(store, 'ai-rank', {
           rules, instruction, rows: found.map((row) => ({
             ingredient: row.ingredient,
@@ -149,7 +159,6 @@ export function StoreCart({ items, send }) {
           })),
         });
         found.forEach((row, index) => {
-          if (row.products.some((product) => product.id === row.id && product.preferred)) return;
           const chosen = row.products.find((product) => product.id === ids[index]);
           update(index, { id: chosen?.id ?? '', q: chosen ? quantityFor(row.ingredient, chosen) : '' });
         });

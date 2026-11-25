@@ -8,6 +8,26 @@ from app.planner import WeeklyPlan
 from app.sync.store import StoredRecipe
 
 
+INGREDIENT_ALIASES = {
+    "яйца": "яйцо",
+    "яйцо куриное": "яйцо",
+    "яйца куриные": "яйцо",
+    "куриное яйцо": "яйцо",
+    "куриные яйца": "яйцо",
+    "огурец": "огурцы",
+    "огурец свежий": "огурцы",
+    "свежий огурец": "огурцы",
+    "огурцы свежие": "огурцы",
+    "помидор": "помидоры",
+    "помидор свежий": "помидоры",
+    "свежий помидор": "помидоры",
+    "помидоры свежие": "помидоры",
+    "томат": "помидоры",
+    "томаты": "помидоры",
+    "томаты свежие": "помидоры",
+}
+
+
 @dataclass(frozen=True)
 class ShoppingAmount:
     name: str
@@ -44,8 +64,10 @@ def aggregate_ingredients(recipes: Iterable[StoredRecipe]) -> ShoppingList:
         recipe_title = recipe.recipe_payload["title"]
         for ingredient in recipe.recipe_payload["ingredients"]:
             raw_name = ingredient["name"]
-            normalized_name = _normalize_ingredient_name(raw_name)
+            normalized_name = ingredient_key(raw_name)
             display_name = raw_name.strip()
+            if " ".join(display_name.casefold().split()) in INGREDIENT_ALIASES:
+                display_name = normalized_name.capitalize() if display_name[:1].isupper() else normalized_name
             amount = ingredient["amount"]
             unit = ingredient["unit"]
 
@@ -105,8 +127,9 @@ def format_shopping_list(shopping_list: ShoppingList) -> Tuple[str, ...]:
     return tuple(lines)
 
 
-def _normalize_ingredient_name(name: str) -> str:
-    return " ".join(name.strip().casefold().split())
+def ingredient_key(name: str) -> str:
+    key = " ".join(name.casefold().split())
+    return INGREDIENT_ALIASES.get(key, key)
 
 
 def group_shopping_list_by_section(
@@ -118,15 +141,16 @@ def group_shopping_list_by_section(
     totals_by_section: Dict[str, List[ShoppingAmount]] = defaultdict(list)
     null_amounts_by_section: Dict[str, List[ShoppingSpecialItem]] = defaultdict(list)
     to_taste_by_section: Dict[str, List[ShoppingSpecialItem]] = defaultdict(list)
+    sections = {ingredient_key(name): section for name, section in ingredient_sections.items()}
 
     for item in shopping_list.totals:
-        section = ingredient_sections.get(_normalize_ingredient_name(item.name), default_section)
+        section = sections.get(ingredient_key(item.name), default_section)
         totals_by_section[section].append(item)
     for item in shopping_list.null_amounts:
-        section = ingredient_sections.get(_normalize_ingredient_name(item.name), default_section)
+        section = sections.get(ingredient_key(item.name), default_section)
         null_amounts_by_section[section].append(item)
     for item in shopping_list.to_taste:
-        section = ingredient_sections.get(_normalize_ingredient_name(item.name), default_section)
+        section = sections.get(ingredient_key(item.name), default_section)
         to_taste_by_section[section].append(item)
 
     return SectionedShoppingList(

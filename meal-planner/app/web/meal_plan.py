@@ -6,7 +6,7 @@ from random import sample
 from urllib.parse import quote
 from uuid import uuid4
 
-from app.shopping.aggregate import aggregate_ingredients
+from app.shopping.aggregate import aggregate_ingredients, ingredient_key
 from app.sync.store import StoredRecipe
 from app.web.recipe_tags import TAGS
 
@@ -164,7 +164,7 @@ def assemble(recipes, payload):
     pantry = payload.get("pantry", [])
     if not isinstance(pantry, list) or any(not isinstance(item, str) for item in pantry):
         raise ValueError("Проверьте список продуктов дома.")
-    excluded = {" ".join(item.casefold().split()) for item in pantry}
+    excluded = {ingredient_key(item) for item in pantry}
     for item in entries:
         recipe_id = item.get("id") if isinstance(item, dict) else None
         if not isinstance(recipe_id, str) or recipe_id not in recipes or recipe_id in seen:
@@ -189,7 +189,7 @@ def assemble(recipes, payload):
             {**product, "amount": product["amount"] * portions / recipe["servings"]
              if product["amount"] is not None else None}
             for product in recipe["ingredients"]
-            if " ".join(product["name"].casefold().split()) not in excluded
+            if ingredient_key(product["name"]) not in excluded
         ]
         scaled.append(StoredRecipe(recipe_id, "", recipe["category"], 1,
                                   {"title": recipe["title"], "ingredients": ingredients}, 0))
